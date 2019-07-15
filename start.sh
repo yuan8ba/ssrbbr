@@ -31,7 +31,7 @@ do
         echo "0.0.0.0 $line 0.0.0.0 $line" >> /root/rinetd.conf
 done < /root/mudb_port.txt
 
-/root/proxy_client -server=59.32.177.26:7000 -vkey=ikglc9f11ctayqhg &
+/root/proxy_client -server=59.32.177.26:7000 -vkey=r16s46rjdn232ljj &
 
 /root/rinetd_bbr_powered -f -c /root/rinetd.conf raw eth0 &
 python /shadowsocksr/server.py m>> ssserver.log 2>&1
